@@ -31,7 +31,12 @@ class MessagesController extends Controller
      */
     public function create()
     {
-        //
+        $message = new Message;
+
+        // メッセージ作成ビューを表示
+        return view('messages.create', [
+            'message' => $message,
+        ]);
     }
 
     /**
